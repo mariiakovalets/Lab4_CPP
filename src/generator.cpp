@@ -62,35 +62,27 @@ int main() {
     
     const int OPERATIONS_PER_FILE = 100000;
     
-    OperationConfig configA = {10, 5, 50, 5, 30, "A (Variant #1)"};
+    OperationConfig configA = {10, 5, 50, 5, 30, "A (Variant 1)"};
     
-    OperationConfig configB = {20, 20, 20, 20, 20, "B (Uniform)"};
+    OperationConfig configB = {20, 20, 20, 20, 20, "B (Equal)"};
     
     OperationConfig configC = {5, 45, 5, 40, 5, "C (Opposite)"};
     
-    cout << "Config A: read0=" << configA.read0_percent << "%, write0=" << configA.write0_percent 
-         << "%, read1=" << configA.read1_percent << "%, write1=" << configA.write1_percent 
-         << "%, string=" << configA.string_percent << "%" << endl;
+    cout << "Config A: variant #1" << endl;
+    cout << "Config B: uniform" << endl;
+    cout << "Config C: opposite" << endl;
     
-    cout << "Config B: read0=" << configB.read0_percent << "%, write0=" << configB.write0_percent 
-         << "%, read1=" << configB.read1_percent << "%, write1=" << configB.write1_percent 
-         << "%, string=" << configB.string_percent << "%" << endl;
-    
-    cout << "Config C: read0=" << configC.read0_percent << "%, write0=" << configC.write0_percent 
-         << "%, read1=" << configC.read1_percent << "%, write1=" << configC.write1_percent 
-         << "%, string=" << configC.string_percent << "%" << endl;
-    
-    cout << "\n--- Generating Config A files ---" << endl;
+    cout << "\nGenerating Config A files" << endl;
     generateFile("../demo/inputa1.txt", configA, OPERATIONS_PER_FILE);
     generateFile("../demo/inputa2.txt", configA, OPERATIONS_PER_FILE);
     generateFile("../demo/inputa3.txt", configA, OPERATIONS_PER_FILE);
     
-    cout << "\n--- Generating Config B files ---" << endl;
+    cout << "\n Generating Config B files " << endl;
     generateFile("../demo/inputb1.txt", configB, OPERATIONS_PER_FILE);
     generateFile("../demo/inputb2.txt", configB, OPERATIONS_PER_FILE);
     generateFile("../demo/inputb3.txt", configB, OPERATIONS_PER_FILE);
     
-    cout << "\n--- Generating Config C files ---" << endl;
+    cout << "\n Generating Config C files " << endl;
     generateFile("../demo/inputc1.txt", configC, OPERATIONS_PER_FILE);
     generateFile("../demo/inputc2.txt", configC, OPERATIONS_PER_FILE);
     generateFile("../demo/inputc3.txt", configC, OPERATIONS_PER_FILE);
